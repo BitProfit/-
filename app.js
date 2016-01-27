@@ -17,63 +17,48 @@ app.use(express.static(path.join(__dirname, 'dist')));
 
 // Routes
 app.get('/', function(req, res) {
-	res.render('index', { title: 'Ethereum Frontier' });
+	res.render('index');
 });
 
 app.get('/cli', function(req, res) {
-	res.render('geth', { title: 'Install Geth' });
+	res.render('cli');
 });
 
 app.get('/ether', function(req, res) {
-	res.render('ether', { title: 'Get Ether' });
+	res.render('ether');
 });
 
 app.get('/greeter', function(req, res) {
-	res.render('greeter', { title: 'Create a Hello World Contract in ethereum' });
+	res.render('greeter');
 });
 
 app.get('/token', function(req, res) {
-	res.render('token', { title: 'Create a cryptocurrency contract in Ethereum' });
+	res.render('token');
 });
 
 app.get('/crowdsale', function(req, res) {
-	res.render('crowdsale', { title: 'Create a crowdsale contract in Ethereum' });
+	res.render('crowdsale');
 });
 
 app.get('/dao', function(req, res) {
-	res.render('dao', { title: 'Create a Democracy contract in Ethereum' });
-});
-
-app.get('/sale', function(req, res) {
-	res.render('sale', { title: '2014 ether presale' });
-});
-
-app.get('/foundation', function(req, res) {
-	res.render('foundation', { title: 'Ethereum Foundation' });
+	res.render('dao');
 });
 
 app.get('/agreement', function(req, res) {
-	res.render('agreement', { title: 'Legal agreement' });
+	res.render('agreement');
 });
 
-app.get('/press-kit', function(req, res) {
-	res.render('press-kit', { title: 'Press Kit' });
+app.get('/assets', function(req, res) {
+	res.render('assets');
 });
 
-app.get('/branding', function(req, res) {
-	res.render('branding', { title: 'Branding Guidelines' });
+app.get('/brand', function(req, res) {
+	res.render('brand');
 });
 
-
-app.get('/powered-by', function(req, res) {
-	res.render('powered-by', { title: 'Powered By' });
+app.get('/foundation', function(req, res) {
+	res.render('foundation');
 });
-
-
-app.get('/create-meetup', function(req, res) {
-	res.render('create-meetup', { title: 'Create your meetup' });
-});
-
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
